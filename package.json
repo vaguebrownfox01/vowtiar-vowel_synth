@@ -1,0 +1,28 @@
+{
+  "name": "vowelsynth",
+  "version": "1.0.0",
+  "description": "Vowel Synthesis From Formants",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev ./src/index.ts",
+    "synth": "tsc && rollup -c && node synthvow.js"
+  },
+  "keywords": [
+    "Formant",
+    "Estimation"
+  ],
+  "author": "Jeevan K, SPIRE Lab, IISc, Bangalore",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-json": "^5.0.1",
+    "klatt-syn": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.3",
+    "rollup": "^3.2.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "ts-node-dev": "^2.0.0"
+  },
+  "node": ">=14.16"
+}

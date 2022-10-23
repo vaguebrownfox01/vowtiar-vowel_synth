@@ -1,0 +1,40 @@
+#! /home/jeevan/dev/anaconda3/envs/pytorch/bin/python
+
+import sys
+import os
+
+import numpy as np
+from scipy.io.wavfile import write
+
+args = sys.argv[1:]
+
+
+FS = 16000
+
+
+def makeWavFromTxt(tfpath: str):
+    nfname = f"{tfpath}.wav"
+    if os.path.exists(nfname):
+        return
+    with open(tfpath, mode="r") as f:
+        l = f.readline().split(",")
+        l = [float(n.strip()) for n in l]
+        l = np.array(l)
+        l = l / max(abs(l))
+
+        os.remove(tfpath)
+
+        # nfname = f"{tfpath}.wav"
+
+        write(nfname, FS, l)
+
+
+if __name__ == "__main__":
+
+    if len(args) == 1:
+        if os.path.exists(args[0]):
+            makeWavFromTxt(args[0])
+        else:
+            print("file doesn't exist")
+    else:
+        print("no path given")
