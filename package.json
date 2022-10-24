@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev ./src/index.ts",
-    "synth": "tsc && rollup -c && node synthvow.js"
+    "synth": "tsc && rollup -c && node synthvow.js",
+    "fsynth": "rm src/data/audio_exports/* && tsc && rollup -c && node synthvow.js"
   },
   "keywords": [
     "Formant",
