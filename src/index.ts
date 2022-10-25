@@ -8,7 +8,7 @@ import _formants from './data/c_timit-vowels_formant_estimation_vowlim10.json';
 let exportFolder =
     '/home/jeevan/Jeevan_K/Projects/Asquire/Vowtiar-Quest/vowtiar-vowel_synth/src/data/audio_exports';
 const pyMakewavHelper =
-    '/home/jeevan/Jeevan_K/Projects/Asquire/Reverb-Quest/Formants/scripts/main/vowelsynth/src/helper/makewav';
+    '/home/jeevan/Desktop/Asquire/Vowtiar-Quest/vowtiar-vowel_synth/src/helper/makewav2';
 
 if (!fs.existsSync(exportFolder)) {
     fs.mkdirSync(exportFolder);
@@ -47,7 +47,7 @@ for (let i = 0; i < formants.length; i++) {
         f['person_id'],
         f['sex'],
         `${pitch}`,
-    ].join('-');
+    ].join('_');
 
     let formantArray = [
         f['F1_mean_praat_base'],
