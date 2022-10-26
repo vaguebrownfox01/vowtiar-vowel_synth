@@ -3,7 +3,7 @@ import { exportSignal } from './lib/makeVowel';
 import * as fs from 'fs';
 
 // CHECK PATHS BEFORE RUNING
-import _formants from './data/c_timit-vowels_formant_estimation_vowlim10.json';
+import _formants from './data/c_timit-vowels_formant_estimation_vowlim100.json';
 
 let exportFolder =
     '/home/jeevan/Jeevan_K/Projects/Asquire/Vowtiar-Quest/vowtiar-vowel_synth/src/data/audio_exports';
