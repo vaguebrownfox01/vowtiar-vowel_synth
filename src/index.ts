@@ -3,12 +3,12 @@ import { exportSignal } from './lib/makeVowel';
 import * as fs from 'fs';
 
 // CHECK PATHS BEFORE RUNING
-import _formants from './data/c_timit-vowels_formant_estimation_vowlim500.json';
+import _formants from './data/c_timit-vowels_formant_estimation_vowlim100.json';
 
 let exportFolder =
-    '/home/jeevan/Jeevan_K/Projects/Asquire/Vowtiar-Quest/vowtiar-vowel_synth/src/data/audio_exports';
+    '/home/jeevan/Desktop/Jeevan_K/Projects/Vowtiar-Quest/vowtiar-formant_estimation/vowtiar-vowel_synth/src/data/audio_exports';
 const pyMakewavHelper =
-    '/home/jeevan/Desktop/Asquire/Vowtiar-Quest/vowtiar-vowel_synth/src/helper/makewav2';
+    '/home/jeevan/Desktop/Jeevan_K/Projects/Vowtiar-Quest/vowtiar-formant_estimation/vowtiar-vowel_synth/src/helper/makewav2';
 
 if (!fs.existsSync(exportFolder)) {
     fs.mkdirSync(exportFolder);
